@@ -1,6 +1,7 @@
 import undetected_chromedriver.v2 as uc
 from flask import Flask, jsonify
 from bs4 import BeautifulSoup
+import os
 
 app = Flask('')
 
@@ -19,4 +20,4 @@ def bedwarsv3():
     data = soup.find("dl", {"class": "downloadCount"}).find("dd").text.replace(",", "")
     return jsonify({"result": data})
 
-app.run(host="0.0.0.0", port=8080)
+app.run(host="0.0.0.0", port=int(os.environ.get("PORT")))
