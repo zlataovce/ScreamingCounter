@@ -36,7 +36,7 @@ def bedwarsv2():
     x = {"approximate": mathed_value, "real": r['downloads']}
     return jsonify(x)
 
-@app.route('/bedwars')
+@app.route('/v1/bedwars/')
 def bedwars():
     url = "https://api.spiget.org/v2/resources/63714"
     r = requests.get(url).json()
