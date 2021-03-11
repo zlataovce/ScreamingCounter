@@ -30,7 +30,7 @@ def cache_update():
 
 @app.route('/v2/bedwars/')
 def bedwarsv2():
-    global cached_value
+    global mathed_value
     url = "https://api.spiget.org/v2/resources/63714"
     r = requests.get(url).json()
     x = {"approximate": mathed_value, "real": r['downloads']}
