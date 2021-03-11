@@ -47,4 +47,4 @@ url = "https://api.spiget.org/v2/resources/63714"
 r = requests.get(url).json()
 Thread(target=cache_update).start()
 Thread(target=lambda: count_update(avgvalues)).start()
-app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+app.run(host="0.0.0.0", port=8080)
