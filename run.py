@@ -20,4 +20,4 @@ def bedwarsv3():
     data = soup.find("dl", {"class": "downloadCount"}).find("dd").text.replace(",", "")
     return jsonify({"result": data})
 
-app.run(host="0.0.0.0", port=int(os.environ.get("PORT")))
+app.run(host="0.0.0.0", port=8080)
