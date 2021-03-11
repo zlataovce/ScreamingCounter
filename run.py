@@ -15,7 +15,7 @@ driver = uc.Chrome(options=chrome_options)
 def bedwarsv3():
     global driver
     url = "https://www.spigotmc.org/resources/screaming-bedwars-1-9-1-16.63714/"
-    driver.get_in(url, delay=5)
+    driver.get_in(url, delay=8)
     soup = BeautifulSoup(driver.page_source, "html.parser")
     data = soup.find("dl", {"class": "downloadCount"}).find("dd").text.replace(",", "")
     return jsonify({"result": data})
